@@ -63,7 +63,7 @@ impl<'a> Lexer<'a> {
         while let Some(c) = self.cur {
             self.consume();
             if c.is_whitespace() {
-                if c != '\n' {
+                if c == '\n' {
                     self.row += 1;
                     self.col = 0;
                 }
